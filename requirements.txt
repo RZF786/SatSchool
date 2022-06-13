@@ -16,3 +16,4 @@ streamlit_book==0.7.0
 ffmpeg-python==0.2.0
 randomname==0.1.5
 click==8.0.4
+protobuf==3.20.0
