@@ -24,8 +24,7 @@ Even though the oceans are so vast they are a complex ecosystem and with the war
 
 st.info("""You are looking at sea surface temperatures and the amount of Chlorophyll-a present in the oceans.
           
-       • What is the max sea surface temperature in June 2000 for each of our datasets? 
-    • What is the max temperature in June 2010?  
+       • What is the max temperature in June 2010?  
     • What is the difference between the summer and winter temperature in the Arctic ocean, the Mediterranean, and the Congo? 
     • Can you see any trends over the 20 yr timeline? 
 """)
