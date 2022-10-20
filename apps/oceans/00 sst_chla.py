@@ -136,13 +136,13 @@ with colb:
     #labels = [str(min_val), f"{min_val + 0.25*(max_val-min_val):.2f}", f"{(min_val + 0.75*(max_val-min_val)):.2f}", str(max_val)]
     #color can be defined using either hex code or RGB (0-255, 0-255, 0-255)
     # colors = [(255, 0, 0), (127, 255, 0), (127, 18, 25), (36, 70, 180), (96, 68, 123)]
-    m.add_colorbar(colors=palette, vmin=min_val, vmax=max_val, caption='Sea Surface Temperature (°C)')
+    m.add_colorbar(vis_params={'palette': palette}, vmin=min_val, vmax=max_val, caption='Sea Surface Temperature (°C)')
 
     #if chla_check_cont.checkbox(label='View Chlorophyll-a concentration'):
     m.addLayer(
             chla, {'min': 0, 'max': 1, 'palette': ['F2F2F2','00A600'],},
             'Chlorophyll-a', True)
-    m.add_colorbar(colors=['F2F2F2','00A600'], vmin=0, vmax=1, caption='Chlorophyll-a concentration (milligrammes per cubic metre)')
+    m.add_colorbar(vis_params={'palette': ['F2F2F2','00A600']}, vmin=0, vmax=1, caption='Chlorophyll-a concentration (milligrammes per cubic metre)')
     #m.add_legend(title='Legend', labels=labels, colors=colors)
     
     left_layer = geemap.ee_tile_layer(sst, remoteSensingReflectanceVis, name='Sea Surface Temperature')
