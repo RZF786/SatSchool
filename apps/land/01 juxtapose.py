@@ -23,7 +23,7 @@ cropLandcover_2017 = dataset2017.select('cropland')
 
 left_layer = geemap.ee_tile_layer(cropLandcover_2017, name='USA Cropland Data Layer 2017')
 right_layer = geemap.ee_tile_layer(cropLandcover_2019, name='USA Cropland Data Layer 2019')
-m.add_legend(builtin_legend='USDA/NASS/CDL')
+#m.add_legend(builtin_legend='USDA/NASS/CDL')
 m.split_map(left_layer, right_layer)
 m.set_center(lat=41.593316,lon=-102.554077, zoom=4)
 m.to_streamlit()
