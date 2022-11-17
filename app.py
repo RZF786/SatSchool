@@ -64,4 +64,4 @@ with st.sidebar:
         if st.experimental_get_query_params()['analytics'] == ['on']:
             stb.admin.configuration()
             stb.admin.user_info()
-            stb.admin.answer_info()
+            #stb.admin.answer_info()
