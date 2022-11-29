@@ -39,8 +39,8 @@ def show_leaderboard(empty_node, show_results=False):
                 h.text('\n'); h.text('\n'); h.text('\n'); h.text('\n'); h.text('\n'); h.text('\n')
                 if h.button('Give me a different name'):
                     st.session_state['name'] = get_name()
-                if 'name' not in st.session_state.keys():
-                    st.session_state['name'] = get_name()
+                #if 'name' not in st.session_state.keys():
+                st.session_state['name'] = get_name()
                 g.markdown(f'Do you want to submit your score to the leaderboard? \n \
                 Your name on the leader board will be **{st.session_state["name"]}**.')
             else:
