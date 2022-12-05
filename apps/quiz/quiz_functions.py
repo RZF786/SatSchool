@@ -65,8 +65,8 @@ def show_leaderboard(empty_node, show_results=False):
                 g.table(df)
                 if st.button('Submit my score'):
                     st.session_state["submitted_name"] = leaderboard_name
+                    df.to_csv(f'leaderboard_data/{st.session_state["submitted_name"]}.csv', mode='a', index=False)
                     with st.spinner(''):
-                        df.to_csv(f'leaderboard_data/{st.session_state["submitted_name"]}.csv', mode='a', index=False)
                         st.success('Your score has been submitted!')
                         st.session_state['quiz_active'] = False
                         time.sleep(2)
