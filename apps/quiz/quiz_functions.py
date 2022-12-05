@@ -8,6 +8,7 @@ import os, glob
 
 TIME_LIMIT = 30 #seconds
 leaderboard_name = ''
+st.session_state['name'] = get_name()
 
 def get_name():
     loop = True
@@ -41,7 +42,6 @@ def show_leaderboard(empty_node, show_results=False):
                 if h.button('Give me a different name'):
                     st.session_state['name'] = get_name()
                 #if 'name' not in st.session_state.keys():
-                st.session_state['name'] = get_name()
                 leaderboard_name = st.session_state['name']
                 g.markdown(f'Do you want to submit your score to the leaderboard? \n \
                 Your name on the leader board will be **{st.session_state["name"]}**.')
