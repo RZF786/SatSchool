@@ -64,11 +64,9 @@ def show_leaderboard(empty_node, show_results=False):
                 df = pd.DataFrame({'Name': st.session_state["name"], 'Final score': st.session_state['total_score'], 'Questions answered': st.session_state['count'], 'Date': datetime.today().strftime("%d/%m/%Y")}, index=[0])
                 g.table(df)
                 if st.button('Submit my score'):
+                    st.session_state["submitted_name"] = leaderboard_name
                     with st.spinner(''):
-                        if leaderboard_name != '':
-                            df.to_csv(f'leaderboard_data/{leaderboard_name}.csv', mode='a', index=False)
-                        else:
-                            df.to_csv(f'leaderboard_data/{st.session_state["name"]}.csv', mode='a', index=False)
+                        df.to_csv(f'leaderboard_data/{st.session_state["submitted_name"]}.csv', mode='a', index=False)
                         st.success('Your score has been submitted!')
                         st.session_state['quiz_active'] = False
                         time.sleep(2)
