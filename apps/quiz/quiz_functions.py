@@ -7,6 +7,7 @@ import randomname
 import os, glob
 
 TIME_LIMIT = 30 #seconds
+leaderboard_name = ''
 
 def get_name():
     loop = True
@@ -41,6 +42,7 @@ def show_leaderboard(empty_node, show_results=False):
                     st.session_state['name'] = get_name()
                 #if 'name' not in st.session_state.keys():
                 st.session_state['name'] = get_name()
+                leaderboard_name = st.session_state['name']
                 g.markdown(f'Do you want to submit your score to the leaderboard? \n \
                 Your name on the leader board will be **{st.session_state["name"]}**.')
             else:
@@ -63,7 +65,10 @@ def show_leaderboard(empty_node, show_results=False):
                 g.table(df)
                 if st.button('Submit my score'):
                     with st.spinner(''):
-                        df.to_csv(f'leaderboard_data/{st.session_state["name"]}.csv', mode='a', index=False)
+                        if leaderboard_name != '':
+                            df.to_csv(f'leaderboard_data/{leaderboard_name}.csv', mode='a', index=False)
+                        else:
+                            df.to_csv(f'leaderboard_data/{st.session_state["name"]}.csv', mode='a', index=False)
                         st.success('Your score has been submitted!')
                         st.session_state['quiz_active'] = False
                         time.sleep(2)
