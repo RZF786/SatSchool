@@ -6,10 +6,6 @@ import math
 import randomname
 import os, glob
 
-TIME_LIMIT = 30 #seconds
-leaderboard_name = ''
-st.session_state['name'] = get_name()
-
 def get_name():
     loop = True
     while loop:
@@ -17,6 +13,10 @@ def get_name():
         if not os.path.exists(f'{name}.csv'):
             loop = False
     return name
+
+TIME_LIMIT = 30 #seconds
+leaderboard_name = ''
+st.session_state['name'] = get_name()
 
 def get_time_remaining(timing):
     time_left = TIME_LIMIT - (timing - st.session_state['time_now'])
