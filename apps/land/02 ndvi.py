@@ -20,7 +20,7 @@ ndviVis = {
   'max': 1.0,
   'palette': ['000000', 'f5f5f5', '119701'],
 }
-m.setCenter(-88.6, 26.4, 1)
+#m.setCenter(-88.6, 26.4, 1)
 m.addLayer(ndvi, ndviVis, 'NDVI')
 
 m.to_streamlit()
