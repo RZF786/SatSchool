@@ -164,11 +164,11 @@ df_data['date'] = pd.to_datetime(df_data['Time'])
 del df_data['Time']
 
 
-st.info("""Use the slider to add and subtract an offset from the sea surface temperatures in the
-different regions. 
-          
-       • What are the average sea surface temperatures in the different regions (over the last 13 years) to the nearest degree?
-""")
+#st.info("""Use the slider to add and subtract an offset from the sea surface temperatures in the
+#different regions. 
+#          
+#       • What are the average sea surface temperatures in the different regions (over the last 13 years) to the nearest degree?
+#""")
 
 a, b = st.columns([0.25,1])
 #norwegian_offset = a.slider("Select norwegian offset", -25,25,0)
