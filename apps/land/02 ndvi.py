@@ -7,10 +7,13 @@ import pathlib
 import geemap.foliumap as geemap
 import ee
 
-st.title('Global Normalised Difference Vegetation Index for 2013')
+st.title('Global Normalised Difference Vegetation Index')
 m = geemap.Map(height=800)
 
-dataset = ee.ImageCollection('NASA/GIMMS/3GV0').filter(ee.Filter.date('2013-06-01', '2013-12-31'))
+year = st.slider("Select the year", 1985, 2013, 2000)
+st.text(f"Normalised difference vegetation index (NDVI) is a widely-used indicator to look at the health and density of vegetation. The map shows global NDVI for the year {year}, from the AVHRR satellite.")
+        
+dataset = ee.ImageCollection('NASA/GIMMS/3GV0').filter(ee.Filter.date(f'{year}-06-01', f'{year}-12-31'))
 ndvi = dataset.select('ndvi')
 ndviVis = {
   'min': -1.0,
