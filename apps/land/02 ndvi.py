@@ -11,7 +11,7 @@ st.title('Global Normalised Difference Vegetation Index')
 m = geemap.Map(height=800)
 
 year = st.slider("Select the year", 1985, 2013, 2000)
-st.text(f"Normalised difference vegetation index (NDVI) is a widely-used indicator to look at the health and density of vegetation. The map shows global NDVI for the year {year}, from the AVHRR satellite.")
+st.info(f"Normalised difference vegetation index (NDVI) is a widely-used indicator to look at the health and density of vegetation. The map shows global NDVI for the year {year}, from the AVHRR satellite.")
         
 dataset = ee.ImageCollection('NASA/GIMMS/3GV0').filter(ee.Filter.date(f'{year}-06-01', f'{year}-12-31'))
 ndvi = dataset.select('ndvi')
