@@ -10,7 +10,7 @@ import ee
 
 a,b = st.columns([0.1,0.9])
 with a:
-    st.image('US_2018_CDL_legend.jpg', caption='Crop data layer legend for 2018')
+    st.image('apps/land/US_2018_CDL_legend.jpg', caption='Crop data layer legend for 2018')
 with b:
     st.title('Crops in 2017 & 2019 across the continental United States')
     m = geemap.Map(height=800)
