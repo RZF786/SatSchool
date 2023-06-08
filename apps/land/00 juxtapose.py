@@ -8,25 +8,29 @@ import pathlib
 import geemap.foliumap as geemap
 import ee
 
-st.title('Crops in 2017 & 2019 across the continental United States')
-m = geemap.Map(height=800)
+a,b = st.columns([0.1,0.9])
+with a:
+    st.image('US_2018_CDL_legend.jpg', caption='Crop data layer legend for 2018')
+with b:
+    st.title('Crops in 2017 & 2019 across the continental United States')
+    m = geemap.Map(height=800)
 
-dataset2019 = ee.ImageCollection('USDA/NASS/CDL')\
+    dataset2019 = ee.ImageCollection('USDA/NASS/CDL')\
                   .filter(ee.Filter.date('2019-01-01', '2019-12-31'))\
                   .first()
-cropLandcover_2019 = dataset2019.select('cropland')
+    cropLandcover_2019 = dataset2019.select('cropland')
 
-dataset2017 = ee.ImageCollection('USDA/NASS/CDL')\
+    dataset2017 = ee.ImageCollection('USDA/NASS/CDL')\
                   .filter(ee.Filter.date('2017-01-01', '2017-12-31'))\
                   .first()
-cropLandcover_2017 = dataset2017.select('cropland')
+    cropLandcover_2017 = dataset2017.select('cropland')
 
-left_layer = geemap.ee_tile_layer(cropLandcover_2017, name='USA Cropland Data Layer 2017')
-right_layer = geemap.ee_tile_layer(cropLandcover_2019, name='USA Cropland Data Layer 2019')
-#m.add_legend(builtin_legend='USDA/NASS/CDL')
-m.split_map(left_layer, right_layer)
-m.set_center(lat=41.593316,lon=-102.554077, zoom=4)
-m.to_streamlit()
+    left_layer = geemap.ee_tile_layer(cropLandcover_2017, name='USA Cropland Data Layer 2017')
+    right_layer = geemap.ee_tile_layer(cropLandcover_2019, name='USA Cropland Data Layer 2019')
+    #m.add_legend(builtin_legend='USDA/NASS/CDL')
+    m.split_map(left_layer, right_layer)
+    m.set_center(lat=41.593316,lon=-102.554077, zoom=4)
+    m.to_streamlit()
 
 
 st.title('Deforestation in Rondônia in western Brazil')
