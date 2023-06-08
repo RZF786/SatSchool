@@ -44,7 +44,7 @@ def show_leaderboard(empty_node, show_results=False):
                 #if 'name' not in st.session_state.keys():
                 try:
                     leaderboard_name = st.session_state['name']
-                except Exception as e,
+                except Exception as e:
                     st.session_state['name'] = get_name()
                     leaderboard_name = st.session_state['name']
                 g.markdown(f'Do you want to submit your score to the leaderboard? \n \
