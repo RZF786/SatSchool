@@ -9,8 +9,6 @@ logo = True
 with open ('apps/intro/satschoollottie.json', 'r') as f:
     lottie_satschool = json.load(f)
     
-st.title('SatSchool - Hands on with Data')
-
 st.markdown("""
     <style>
 .button-30 {
@@ -62,6 +60,8 @@ st.markdown("""
 
 url = 'https://forms.gle/SGnSzT6DhR1y3Cp97'
 st.markdown(f"#### <a href='{url}'><button class='button-30' role='button'>Provide feedback here</button></a>", unsafe_allow_html=True)
+
+st.title('SatSchool - Hands on with Data')
 
 a,b = st.columns([0.3,0.5])
 
