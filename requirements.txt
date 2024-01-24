@@ -8,12 +8,12 @@ extra-streamlit-components==0.1.53
 geopandas==0.9.0
 geemap==0.26.0
 numpy==1.20.0
-leafmap==0.7.1
+leafmap
 pandas<=2.0.0
-eemont==0.1.9
+eemont
 streamlit_book==0.7.5
 ffmpeg-python==0.2.0
 randomname==0.1.5
 click==8.0.4
-protobuf==3.20.0
-earthengine-api=0.1.379
+protobuf
+earthengine-api==0.1.379
