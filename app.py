@@ -4,7 +4,7 @@ import streamlit_book as stb
 import geemap
 from pathlib import Path
 import ee
-ee.Initialize(project_id='ee-spiruel')
+ee.Initialize(project='ee-spiruel')
 import os
 st.session_state["warned_about_save_answers"] = True
 
