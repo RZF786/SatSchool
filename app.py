@@ -3,7 +3,7 @@ import streamlit as st
 import streamlit_book as stb
 import geemap
 from pathlib import Path
-geemap.ee_initialize()
+# geemap.ee_initialize()
 import os
 st.session_state["warned_about_save_answers"] = True
 
