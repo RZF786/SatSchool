@@ -1,6 +1,6 @@
 import geemap.foliumap as geemap
 import ee
-geemap.ee_initialize(**{'project':'ee-spiruel'})
+# geemap.ee_initialize(**{'project':'ee-spiruel'})
 import eemont
 import streamlit.components.v1 as components
 import datetime
