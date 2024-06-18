@@ -24,7 +24,7 @@ st.set_page_config(layout="wide", page_title="SatSchool", page_icon="🛰️")
 show_pages(
     [
         Section(name="", icon="🏠"),
-        Page("home.py", "Home", ""),
+        Page("app.py", "Home", ""),
         Page("pages/intro/timeline.py", "Timeline", ""),
         Page("pages/intro/timelapse.py", "Timelapse", ""),
         Page("pages/intro/lights.py", "Night Lights", ""),
