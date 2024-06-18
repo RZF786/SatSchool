@@ -50,9 +50,6 @@ footer {visibility: hidden;}
 """
 #st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
-# Set multipage
-current_path = Path(__file__).parent.absolute()
-
 with st.sidebar:
 
     st.sidebar.title("About")
