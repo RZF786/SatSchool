@@ -4,8 +4,8 @@ import pandas as pd
 import time
 import random
 
-from st_pages import add_page_title
-add_page_title()
+from st_pages import add_indentation
+add_indentation()
 
 from pages.quiz.quiz_questions import quiz_questions
 from pages.quiz.quiz_functions import *

@@ -1,8 +1,8 @@
 import streamlit as st
 import streamlit.components.v1 as components
 
-from st_pages import add_page_title
-add_page_title()
+from st_pages import add_indentation
+add_indentation()
 
 # parameters
 CDN_LOCAL = False

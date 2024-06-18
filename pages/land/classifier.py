@@ -7,8 +7,8 @@ import pandas as pd
 import streamlit as st
 import requests
 
-from st_pages import add_page_title
-add_page_title()
+from st_pages import add_indentation
+add_indentation()
 
 from streamlit_lottie import st_lottie_spinner
 

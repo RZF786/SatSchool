@@ -8,8 +8,8 @@ import streamlit as st
 import altair as alt
 import numpy as np
 
-from st_pages import add_page_title
-add_page_title()
+from st_pages import add_indentation
+add_indentation()
 
 if 'well_done' not in st.session_state:
     st.session_state.well_done = False

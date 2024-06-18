@@ -9,8 +9,8 @@ import ee
 import extra_streamlit_components as stx
 import re
 
-from st_pages import add_page_title
-add_page_title()
+from st_pages import add_indentation
+add_indentation()
 
 instructions = {'1': ['''Firstly, you should define the two radar images you want to use, for different dates.
 

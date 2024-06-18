@@ -2,8 +2,8 @@ import geemap.foliumap as geemap
 import ee
 import streamlit as st
 
-from st_pages import add_page_title
-add_page_title()
+from st_pages import add_indentation
+add_indentation()
 
 st.markdown(
     ''':balloon:**Welcome to the Night Light Imagery worksheet!:balloon: :full_moon_with_face:**''')

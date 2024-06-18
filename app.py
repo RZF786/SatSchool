@@ -5,7 +5,7 @@ import time
 import json
 
 import streamlit as st
-from st_pages import Page, show_pages, add_page_title, Section
+from st_pages import Page, show_pages, add_indentation, Section
 import geemap
 from pathlib import Path
 #geemap.ee_initialize()
@@ -15,9 +15,10 @@ from streamlit_lottie import st_lottie_spinner
 import time
 import json
 
-st.session_state["warned_about_save_answers"] = True
-
 st.set_page_config(layout="wide", page_title="SatSchool", page_icon="🛰️")
+
+
+st.session_state["warned_about_save_answers"] = True
 
 # Specify what pages should be shown in the sidebar, and what their titles 
 # and icons should be
@@ -39,16 +40,7 @@ show_pages(
         Page("pages/quiz.py", "Quiz", ""),
     ]
 )
-add_page_title()
-
-hide_streamlit_style = """
-<style>
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-</style>
-
-"""
-#st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+add_indentation()
 
 with st.sidebar:
 
@@ -88,3 +80,12 @@ You will learn:
 * How to interpret maps and graphs displaying different types of environmental data
 
 <img src="https://www.gim-international.com/cache/a/f/b/3/2/afb32cbe5b80419c8de0d63398cfb5c661498273.jpeg" alt="Sentinel 2" width="700">""", unsafe_allow_html=True)
+
+hide_streamlit_style = """
+<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+</style>
+
+"""
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 

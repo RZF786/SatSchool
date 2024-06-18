@@ -8,8 +8,8 @@ import pathlib
 import geemap.foliumap as geemap
 import ee
 
-from st_pages import add_page_title
-add_page_title()
+from st_pages import add_indentation
+add_indentation()
 
 st.markdown(''':balloon: **Welcome to the Land Cover Change Comparison worksheet!:balloon: :full_moon_with_face:**''')
 st.markdown('''**In this activity, we'll explore the changes in crop distribution across the continental United States between the years 2017 and 2019. Using interactive imagery, you'll navigate through the landscapes and observe the shifts in land cover over this two-year period.**''')

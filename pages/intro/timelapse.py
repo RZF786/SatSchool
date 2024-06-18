@@ -9,8 +9,8 @@ import geemap.foliumap as geemap
 from datetime import date
 from pages.code.rois import *
 
-from st_pages import add_page_title
-add_page_title()
+from st_pages import add_indentation
+add_indentation()
 
 @st.cache
 def uploaded_file_to_gdf(data):
