@@ -8,7 +8,10 @@ import streamlit as st
 from st_pages import Page, show_pages, add_indentation, Section
 import geemap
 from pathlib import Path
-geemap.ee_initialize()
+#geemap.ee_initialize()
+
+import ee
+ee.Initialize(project='ee-spiruel')
 
 from streamlit_lottie import st_lottie
 from streamlit_lottie import st_lottie_spinner
