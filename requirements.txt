@@ -8,9 +8,9 @@ extra-streamlit-components==0.1.53
 st-pages==0.4.5
 geopandas==0.9.0
 geemap==0.32.1
-numpy==1.26.0
-pandas==1.3.3
-eemont==0.1.9
+numpy
+pandas
+eemont
 ffmpeg-python==0.2.0
 randomname==0.1.5
 click==8.0.4
