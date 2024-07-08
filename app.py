@@ -8,7 +8,7 @@ import streamlit as st
 from st_pages import Page, show_pages, add_indentation, Section
 import geemap
 from pathlib import Path
-geemap.ee_initialize(**{'project':'ee-spiruel'})
+# geemap.ee_initialize(**{'project':'ee-spiruel'})
 
 #import ee
 #ee.Initialize(project='ee-spiruel')
