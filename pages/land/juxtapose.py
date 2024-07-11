@@ -61,7 +61,8 @@ st.title('Deforestation in Rondônia in western Brazil')
 with st.container():
 
 
-    STREAMLIT_STATIC_PATH = ("."
+    STREAMLIT_STATIC_PATH = (
+    pathlib.Path(st.__path__[0]) / "static"
     )  # at venv/lib/python3.9/site-packages/streamlit/static
 
     IMG1 = "2000.jpg"
@@ -85,12 +86,12 @@ with st.container():
     #img1_url = form.text_input("Image one url", value=DEFAULT_IMG1_URL)
     #img1 = fetch_img_from_url(DEFAULT_IMG1_URL)
     img1 = Image.open('pages/land/amazon_deforestation_20000730_lrg.jpg')
-    img1.save(STREAMLIT_STATIC_PATH / IMG1)
+    #img1.save(STREAMLIT_STATIC_PATH / IMG1)
 
     #img2_url = form.text_input("Image two url", value=DEFAULT_IMG2_URL)
     #img2 = fetch_img_from_url(DEFAULT_IMG2_URL)
     img2 = Image.open('pages/land/amazon_deforestation_20120718_lrg.jpg')
-    img2.save(STREAMLIT_STATIC_PATH / IMG2)
+    #img2.save(STREAMLIT_STATIC_PATH / IMG2)
 
     #submit = form.form_submit_button("Submit")
     #if submit:
