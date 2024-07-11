@@ -61,8 +61,7 @@ st.title('Deforestation in Rondônia in western Brazil')
 with st.container():
 
 
-    STREAMLIT_STATIC_PATH = (
-    pathlib.Path(st.__path__[0]) / "static"
+    STREAMLIT_STATIC_PATH = ("."
     )  # at venv/lib/python3.9/site-packages/streamlit/static
 
     IMG1 = "2000.jpg"
