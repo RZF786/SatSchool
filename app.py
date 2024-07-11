@@ -8,10 +8,11 @@ import streamlit as st
 from st_pages import Page, show_pages, add_indentation, Section
 import geemap
 from pathlib import Path
-# geemap.ee_initialize(**{'project':'ee-spiruel'})
 
 import ee
+ee.Authenticate(auto_mode='colab')
 ee.Initialize(project='ee-spiruel')
+# geemap.ee_initialize(**{'project':'ee-spiruel'})
 
 from streamlit_lottie import st_lottie
 from streamlit_lottie import st_lottie_spinner
