@@ -7,7 +7,7 @@ streamlit-option-menu==0.2.6
 extra-streamlit-components==0.1.53
 st-pages==0.4.5
 geopandas==0.9.0
-geemap==0.32.1
+geemap
 numpy
 pandas
 eemont
