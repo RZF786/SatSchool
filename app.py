@@ -10,9 +10,9 @@ import geemap
 from pathlib import Path
 
 import ee
-ee.Authenticate()
-ee.Initialize(project='ee-spiruel')
-# geemap.ee_initialize(**{'project':'ee-spiruel'})
+# ee.Authenticate()
+# ee.Initialize(project='ee-spiruel')
+geemap.ee_initialize(**{'project':'ee-spiruel'})
 
 from streamlit_lottie import st_lottie
 from streamlit_lottie import st_lottie_spinner
