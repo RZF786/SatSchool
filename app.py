@@ -10,7 +10,7 @@ import geemap
 from pathlib import Path
 
 import ee
-# ee.Authenticate(auto_mode='colab')
+ee.Authenticate()
 ee.Initialize(project='ee-spiruel')
 # geemap.ee_initialize(**{'project':'ee-spiruel'})
 
