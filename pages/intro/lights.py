@@ -1,5 +1,7 @@
 import geemap.foliumap as geemap
 import ee
+ee.Initialize(project='ee-spiruel')
+
 import streamlit as st
 
 from st_pages import add_indentation
