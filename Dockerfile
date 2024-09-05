@@ -28,4 +28,4 @@ EXPOSE 8501
 HEALTHCHECK CMD curl --fail http://localhost:8501/_stcore/health
 
 # Defines how to start the application. In this case the Streamlit application’s filename is st.py, so feel free to adjust it to your app’s name.
-ENTRYPOINT ["streamlit", "run", "st.py", "--server.port=8501", "--server.address=0.0.0.0"]
+ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
