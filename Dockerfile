@@ -1,5 +1,8 @@
 # app/Dockerfile
 
+# Stage 1: Install Google Cloud SDK
+FROM gcr.io/google.com/cloudsdktool/google-cloud-cli:stable as gcloud
+
 # This Dockerfile uses python:3.9-slim, which is a lightweight implementation of the Python image. This’ll reduce image size.
 FROM python:3.9-slim
 
