@@ -6,6 +6,7 @@ chart:
   name: onechart
   version: 0.70.0
 values:
+  containerPort: 8501
   gitRepository: Spiruel/SatSchool
   gitSha: '{{ .SHA }}'
   image:
